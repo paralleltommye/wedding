@@ -7,245 +7,57 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
     body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #fff;
-  background-image: url('paper-texture.jpg'); /* ← сюда добавь свою текстуру */
-  background-size: cover;
-  background-repeat: repeat;
-  color: #333;
-  line-height: 1.6;
-  text-align: center;
-}
-
-.container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.handwritten {
-  font-family: 'Great Vibes', cursive;
-  font-size: 60px;
-  color: #444;
-}
-
-h1, h2, h3 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 28px;
-  color: #333;
-}
-
-.photo {
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  margin: 20px 0;
-  border-radius: 12px;
-}
-
-.section {
-  margin: 40px 0;
-}
-
-.timer {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.timing-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.timing-time {
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.timing-title {
-  font-family: 'Great Vibes', cursive;
-  font-size: 28px;
-  margin: 5px 0;
-}
-
-.pastel-section {
-  background-color: #f7f3ee;
-  padding: 20px;
-  margin-top: 40px;
-  border-radius: 0;
-}
-
-.map-button {
-  display: inline-block;
-  margin-top: 10px;
-  background-color: white;
-  color: #333;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.color-palette {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 20px;
-}
-
-.color-circle {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-}
-
-.rsvp-form label {
-  display: block;
-  m
-
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      background-image: url('paper-texture.jpg');
+      background-size: cover;
+      background-repeat: repeat;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .centered {
+      text-align: center;
+    }
+    .handwritten {
+      font-family: 'Great Vibes', cursive;
+      font-size: 42px;
+      color: #444;
+    }
+    .title-big {
+      font-size: 70px;
+    }
+    h1, h2, h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 28px;
+      color: #333;
+    }
+    .photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      margin: 20px 0;
+      border-radius: 12px;
+    }
+    .section {
+      margin: 40px 0;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-
-    <div class="section" style="text-align:center;">
-      <div class="handwritten">Wedding day</div>
+    <div class="section centered">
+      <div class="handwritten title-big">Wedding day</div>
       <img src="your-photo.jpg" alt="Молодята" class="photo"/>
       <h2>Запрошуємо Вас на наше весілля</h2>
     </div>
-
-    <div class="section">
-      <div class="handwritten">Дорогі наші рідні та друзі!</div>
-      <p>З величезною радістю запрошуємо вас розділити з нами найважливіший день у нашому житті – день нашого весілля! Ми будемо щасливі бачити вас поруч, адже саме ваша любов, підтримка та теплі посмішки зроблять це свято ще більш особливим.</p>
-    </div>
-
-    <div class="section">
-      <div class="handwritten">Дата</div>
-      <p style="font-size: 20px;">20.09.2025</p>
-      <div class="handwritten" style="margin-top:30px;">До весілля залишилось</div>
-      <div class="timer" id="countdown"></div>
-    </div>
-
-    <div class="section">
-      <div class="handwritten">Весільний таймінг</div>
-
-      <div class="timing-block">
-        <div class="timing-time">14:30</div>
-        <div class="timing-content">
-          <div class="timing-title">Зустріч</div>
-          <div>Гості збираються у парковій зоні біля місця церемонії. Вас чекатимуть welcome-зона, легкі напої та музика.</div>
-        </div>
-      </div>
-
-      <div class="timing-block">
-        <div class="timing-time">15:00</div>
-        <div class="timing-content">
-          <div class="timing-title">Церемонія одруження</div>
-          <div>Момент, на який ми всі чекали!.</div>
-        </div>
-      </div>
-
-      <div class="timing-block">
-        <div class="timing-time">18:00</div>
-        <div class="timing-content">
-          <div class="timing-title">Банкет</div>
-          <div>Переміщаємося до ресторану “Гранд Холл”, де на вас чекатимуть смачні страви, святкова програма та веселощі.</div>
-        </div>
-      </div>
-
-      <div class="timing-block">
-        <div class="timing-time">00:00</div>
-        <div class="timing-content">
-          <div class="timing-title">Завершення офіційної частини</div>
-          <div>Дякуємо, що розділили з нами цей особливий день! Але для тих, хто ще має сили, святкування може продовжитися в лаунж-зоні.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pastel-section">
-      <div class="handwritten">Місце церемонії:</div>
-      <p>Центральний парк,<br>локація “Лісова поляна”</p>
-      <a class="map-button" href="https://maps.google.com/?q=50.449751,30.525009" target="_blank">Відкрити карту</a>
-
-      <div class="handwritten" style="margin-top:30px;">Місце банкету:</div>
-      <p>Ресторан “Гранд Холл”, вул. Весільна, 12</p>
-      <a class="map-button" href="https://www.google.com/maps?q=Khreschatyk+St,+13,+Kyiv,+Ukraine,+01001" target="_blank">Відкрити карту</a>
-    </div>
-
-    <div class="section">
-      <div class="handwritten">Дрес-код</div>
-      <p>Просимо гостей обрати елегантні вбрання у світлих або пастельних тонах</p>
-      <div class="color-palette">
-        <div class="color-circle" style="background-color: #f2e6dc;"></div>
-        <div class="color-circle" style="background-color: #e0d4c3;"></div>
-        <div class="color-circle" style="background-color: #d1cbc1;"></div>
-        <div class="color-circle" style="background-color: #f5f5f5;"></div>
-        <div class="color-circle" style="background-color: #ebe2dd;"></div>
-      </div>
-    </div>
-
-    <div class="pastel-section">
-      <div class="handwritten">Присутність</div>
-      <p>Щоб цей день пройшов бездоганно, будемо вдячні, якщо ви підтвердите свою присутність до 1 серпня 2025 року.</p>
-         <form class="rsvp-form" action="https://formspree.io/f/xqabjokp" method="POST">
-  <label>Прізвище та імʼя:
-    <input type="text" name="name" required>
-  </label>
-
-  <label>Чи зможете ви бути присутнім?</label>
-  <div class="radio-group">
-    <label><input type="radio" name="attendance" value="Так, зможу" required> Так, зможу</label>
-    <label><input type="radio" name="attendance" value="Вагаюсь з відповіддю, повідомлю пізніше"> Вагаюсь з відповіддю</label>
-    <label><input type="radio" name="attendance" value="Не зможу прийти"> Не зможу прийти</label>
   </div>
-
-  <label>Коментар:
-    <textarea name="comment" rows="3"></textarea>
-  </label>
-
-  <button class="submit-button" type="submit">Відправити</button>
-      </form>
-    </div>
-
-    <footer>
-      З нетерпінням чекаємо на вас, щоб разом розділити цей чарівний день!
-    </footer>
-  </div>
-
-  <script>
-    const countdown = document.getElementById("countdown");
-    const targetDate = new Date("2025-09-20T00:00:00").getTime();
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-
-      if (distance <= 0) {
-        countdown.innerHTML = "Сьогодні!";
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((distance / (1000 * 60)) % 60);
-      const seconds = Math.floor((distance / 1000) % 60);
-
-      countdown.innerHTML = `
-        ${days} д. ${hours} год. ${minutes} хв. ${seconds} сек.
-      `;
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  </script>
 </body>
 </html>
